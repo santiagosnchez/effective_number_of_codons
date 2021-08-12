@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 # effective number of codons function
 # based on:
 # Estimating the “Effective Number of Codons”: The Wright Way of Determining Codon Homozygosity Leads to Superior Estimates
@@ -101,3 +102,4 @@ if __name__ == '__main__':
                     seq = ''
                 else:
                     seq += line.rstrip()
+
