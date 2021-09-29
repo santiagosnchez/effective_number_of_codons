@@ -62,7 +62,7 @@ def main():
                     # main calculation here
                     k,n,fcf,tc = prep_counts_for_Nc(seq)
                     Nc = calc_Nc(k, n, fcf)
-                    print(head[1:],Nc,tc,sep=',')
+                    print(head[1:],Nc,tc,sep=',',flush=True)
                 head = line.rstrip()
                 seq = ''
             else:
@@ -79,7 +79,7 @@ def main():
                         # main calculation here
                         k,n,fcf,tc = prep_counts_for_Nc(seq)
                         Nc = calc_Nc(k, n, fcf)
-                        print(head[1:],Nc,tc,sep=',')
+                        print(head[1:],Nc,tc,sep=',',flush=True)
                     head = line.rstrip()
                     seq = ''
                 else:
