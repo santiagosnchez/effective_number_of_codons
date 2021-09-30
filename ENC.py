@@ -95,7 +95,6 @@ def main():
                 k,n,fcf,tc = prep_counts_for_Nc(seq)
                 Nc = calc_Nc(k, n, fcf)
                 print(head[1:],Nc,tc,sep=',',flush=True)
-    print(seq)
 
 def prep_counts_for_Nc(codseq):
     '''
