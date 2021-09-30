@@ -63,11 +63,11 @@ def main():
                     k,n,fcf,tc = prep_counts_for_Nc(seq)
                     Nc = calc_Nc(k, n, fcf)
                     print(head[1:],Nc,tc,sep=',',flush=True)
-                head = line.rstrip()
+                head = line.rstrip().upper()
                 seq = ''
             else:
                 # get sequence and strip from white space
-                seq += line.rstrip()
+                seq += line.rstrip().upper()
     else:
         input_file = sys.argv[1]
         print("gene,ENC,number_of_codons")
@@ -80,11 +80,11 @@ def main():
                         k,n,fcf,tc = prep_counts_for_Nc(seq)
                         Nc = calc_Nc(k, n, fcf)
                         print(head[1:],Nc,tc,sep=',',flush=True)
-                    head = line.rstrip()
+                    head = line.rstrip().upper()
                     seq = ''
                 else:
                     # get sequence and strip from white space
-                    seq += line.rstrip()
+                    seq += line.rstrip().upper()
 
 def prep_counts_for_Nc(codseq):
     '''
