@@ -54,7 +54,7 @@ codon2CF = {
 
 def main():
     if not os.isatty(0):
-        print("gene,ENC,number_of_codons")
+        print("gene,Nc,number_of_codons")
         head = ''
         for line in sys.stdin.readlines():
             if line[0] == ">":
@@ -70,7 +70,7 @@ def main():
                 seq += line.rstrip().upper()
     else:
         input_file = sys.argv[1]
-        print("gene,ENC,number_of_codons")
+        print("gene,Nc,number_of_codons")
         with open(input_file, 'r') as f:
             head = ''
             for line in f:
@@ -85,6 +85,7 @@ def main():
                 else:
                     # get sequence and strip from white space
                     seq += line.rstrip().upper()
+    print(seq)
 
 def prep_counts_for_Nc(codseq):
     '''
