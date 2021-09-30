@@ -78,6 +78,7 @@ def main():
                     if len(head) != 0 and len(seq) != 0:
                         # main calculation here
                         k,n,fcf,tc = prep_counts_for_Nc(seq)
+                        print(k,n,fcf,tc)
                         Nc = calc_Nc(k, n, fcf)
                         print(head[1:],Nc,tc,sep=',',flush=True)
                     head = line.rstrip().upper()
